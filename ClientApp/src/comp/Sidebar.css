@@ -1,0 +1,34 @@
+.sidebar{
+    height: 100%;
+    width: 123px;
+    background-color: #7F4343;
+    border-radius: 30px;
+    display: inline-block;
+    margin-right: 50px;
+    position: relative;
+}
+
+.logo-container{
+    background-color: #571414;
+    width: 123px;
+    height: 106px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+
+    padding-top: 22px;
+    padding-left: 32px;
+}
+
+.logo{
+    background-color: whitesmoke;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+
+}
+
+.nav-container{
+    width: 123px;
+    height: 500px;
+    /* background-color: rgba(245, 245, 245, 0.44); */
+}
