@@ -14,19 +14,19 @@ export default function Sidebar(){
                     </div>
                 </div>
                 <div className="nav-container">
-                    <NavLink className="nav-item" to={"/"} activeClassname="active">
+                    <NavLink className="nav-item" to={"/"} activeclassname="active">
                         <FontAwesomeIcon icon={faHome} size="2x" />
                     </NavLink>
 
-                    <NavLink className="nav-item" to={"/clients"} activeClassname="active">
+                    <NavLink className="nav-item" to={"/clients"} activeclassname="active">
                         <FontAwesomeIcon icon={faUser} size="2x" />
                     </NavLink>
 
-                    <NavLink className="nav-item" to={"/loans"} activeClassname="active">
+                    <NavLink className="nav-item" to={"/loans"} activeclassname="active">
                         <FontAwesomeIcon icon={faMoneyBill1Wave} size="2x" />
                     </NavLink>
 
-                    <NavLink className="nav-item" to={"/reports"} activeClassname="active">
+                    <NavLink className="nav-item" to={"/reports"} activeclassname="active">
                         <FontAwesomeIcon icon={faFileInvoice} size="2x" />
                     </NavLink>
                     

@@ -2,6 +2,9 @@ Install this first on the cli
 	dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 and install this on the Nuget
 	Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+dotnet tool install --global dotnet-aspnet-codegenerator --version 7.0.3
+
 and then build
 
 Create an area:
