@@ -35,12 +35,36 @@ const MultiStepForm = ({ onStepClick }) => {
   const [selectedCity, setSelectedCity] = useState('');
   const [selectedBarangay, setSelectedBarangay] = useState('');
 
+  const [totalBringHome, setTotalBringHome] = useState(0);
 
-    useEffect(() => {
-      // Save the original lists when the component mounts
-      setOriginalCities(city);
-      setOriginalBarangays(barangay);
-    }, []);
+  
+  const calculateTotalBringHome = () => {
+    const { capital, interest, deductCBU, deductInsurance, deductOther } = formData;
+
+    // Calculate total deductions
+    const totalDeductions = parseFloat(deductCBU) + parseFloat(deductInsurance) + parseFloat (deductOther);
+    console.log("BH is : " + totalDeductions);
+
+    const intrst = capital * (parseFloat(interest) / 100);
+    console.log("intrest : " + intrst);
+
+    // Calculate total bring home cash
+    const totalBringHome = (parseFloat(capital) - intrst) - totalDeductions;
+    
+    setTotalBringHome(totalBringHome);
+  };
+
+  useEffect(() => {
+    calculateTotalBringHome();
+  }, [formData]);
+
+
+
+  useEffect(() => {
+    // Save the original lists when the component mounts
+    setOriginalCities(city);
+    setOriginalBarangays(barangay);
+  }, []);
 
   const handleProvinceChange = (event) => {
     const selectedProvinceCode = event.target.value;
@@ -419,6 +443,7 @@ const MultiStepForm = ({ onStepClick }) => {
                     <Input
                       disabled
                       type='number'
+                      value={totalBringHome}
                     />
                   </FormGroup>
                 </Col>

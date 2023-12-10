@@ -29,7 +29,7 @@ replace the content of your csproj to this:
 save the file then run this command to terminal dotnet ef
 
 	dotnet ef dbcontext scaffold "server=localhost;database=test;user=root;pwd=" "Pomelo.EntityFrameworkCore.MySql" -o .\Entities -f
-	dotnet ef dbcontext scaffold "server=localhost;database=sampleDb;user=root;pwd=" "Pomelo.EntityFrameworkCore.MySql" -o .\Entities -f
+	dotnet ef dbcontext scaffold "server=localhost;database=olapp;user=root;pwd=" "Pomelo.EntityFrameworkCore.MySql" -o .\Entities -f
 
 
   builder.Services.AddDbContext<SampleappContext>(options =>
